@@ -26,6 +26,7 @@ public class Test_Kaprekar{
             Assertions.assertEquals(999, kaprekarOp(1000));
         }
 
+        // Avances de ftr_4_test_3 dan abasto para el siguiente test (3 y 4).
         @Test
         public void testKaprekarOperation3() {
             // Prueba con el número 5200 (debe devolver 5175)
