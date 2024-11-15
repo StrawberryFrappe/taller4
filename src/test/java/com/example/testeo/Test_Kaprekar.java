@@ -26,7 +26,7 @@ public class Test_Kaprekar{
             Assertions.assertEquals(999, kaprekarOp(1000));
         }
 
-        // Avances de ftr_4_test_3 dan abasto para el siguiente test (3 y 4).
+        // Avances de ftr_4_test_3 dan solucion a los test 3 y 4.
         @Test
         public void testKaprekarOperation3() {
             // Prueba con el número 5200 (debe devolver 5175)
@@ -38,6 +38,8 @@ public class Test_Kaprekar{
             Assertions.assertEquals(999, kaprekarOp(2111));
         }
 
+
+        // Avances en ftr_5_test_5 dan solucion a test 5 y 6
         @Test
         public void testIterationsToKaprekarConstant1() {
             // Prueba con el número 3524 (llega a 6174 en 3 iteraciones)
