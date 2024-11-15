@@ -39,7 +39,13 @@ public static int smallestReorder(int num){
 
 public static int itKaprekar(int num){
     //iterates until kaprekarOp returns 6174
-    return 0;
+    int count = 0;
+    while(num != 6174){
+        num = kaprekarOp(num);
+        System.out.println(num);
+        count++;
+    }
+    return count;
 }
 //aquí van sus funciones:
 
