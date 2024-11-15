@@ -5,6 +5,7 @@ package com.example.dev;
 // -encoding UTF-8 -charset UTF-8 -docencoding UTF-8
 
 
+import java.util.stream.Collectors;
 
 public class Main_Kaprekar {
 
@@ -15,7 +16,25 @@ public static void main(String[] args){
 public static int kaprekarOp(int num){
     //validate not all digits are the same
     //num -> biggest - smallest (reorder)
-    return num == 3524 ? 3087 : num == 1000 ? 999 : 0;
+    if (String.valueOf(num).chars().distinct().count() > 1){
+        return biggestMinusSmallest(num);
+    } else {
+        return 0;
+    }
+}
+
+public static int biggestMinusSmallest(int num){
+    //convert to string and sort
+    return biggestReorder(num) - smallestReorder(num);
+}
+
+public static int biggestReorder(int num){
+    //convert to string and sort in descending order
+    return Integer.parseInt(String.valueOf(num).chars().mapToObj(c -> (char) c).sorted((a, b) -> b - a).map(String::valueOf).collect(Collectors.joining()));
+}
+public static int smallestReorder(int num){
+    //convert to string and sort in ascending order
+    return Integer.parseInt(String.valueOf(num).chars().mapToObj(c -> (char) c).sorted().map(String::valueOf).collect(Collectors.joining()));
 }
 
 public static int itKaprekar(int num){
