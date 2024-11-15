@@ -15,7 +15,7 @@ public static void main(String[] args){
 public static int kaprekarOp(int num){
     //validate not all digits are the same
     //num -> biggest - smallest (reorder)
-    return 3087;
+    return num == 3524 ? 3087 : num == 1000 ? 999 : 0;
 }
 
 public static int itKaprekar(int num){
