@@ -16,6 +16,11 @@ public static void main(String[] args){
 public static int kaprekarOp(int num){
     //validate not all digits are the same
     //num -> biggest - smallest (reorder)
+    //if the number is shorter than 4 digits, add 0s to the right
+
+    while (String.valueOf(num).length() < 4){
+        num = num * 10;
+    }
     if (String.valueOf(num).chars().distinct().count() > 1){
         return biggestMinusSmallest(num);
     } else {
@@ -42,7 +47,6 @@ public static int itKaprekar(int num){
     int count = 0;
     while(num != 6174){
         num = kaprekarOp(num);
-        System.out.println(num);
         count++;
     }
     return count;
