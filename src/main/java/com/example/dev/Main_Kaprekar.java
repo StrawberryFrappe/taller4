@@ -12,7 +12,16 @@ public static void main(String[] args){
     System.out.println("Clase Main");
 
 }
+public static int kaprekarOp(int num){
+    //validate not all digits are the same
+    //num -> biggest - smallest (reorder)
+    return 3087;
+}
 
+public static int itKaprekar(int num){
+    //iterates until kaprekarOp returns 6174
+    return 0;
+}
 //aquí van sus funciones:
 
 }
